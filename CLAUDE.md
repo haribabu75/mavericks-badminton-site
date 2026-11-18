@@ -3,34 +3,37 @@
 Static site (no build step), published with GitHub Pages from `main` at
 https://haribabu75.github.io/mavericks-badminton-site/
 
-## Three versions live side by side
-| Path | What it is |
-|---|---|
-| `/` (`index.html`, `css/`, `js/`, `images/`, `tools/`) | Original Mavericks Club site |
-| `/preview/` | Earlier "Mavericks Badminton Academy" redesign with a 3-tap session finder |
-| `/v8/` | V8: junior-coaching-first, dark cinematic theme, scroll-driven court, session finder, Juniors/Grown-ups switch. Test version, has `noindex` |
+## What is live
+`/` is the V8 site (junior-coaching-first, dark theme, session finder, Juniors/Grown-ups switch).
+Earlier versions (original by Chinthan, `/preview/` redesign) were removed from the served files on go-live;
+they remain in git history (commit `b5e37d9` original, `c3db6ba` preview).
 
-Each version is self-contained and uses relative paths only. Do not make paths absolute (`/css/...`), or they break when served from a subfolder.
+| File | Purpose |
+|---|---|
+| `index.html`, `css/`, `js/`, `images/` | The site (self-contained, relative paths only) |
+| `tools/session-manager.html` | Members' session tool, linked from the footer only, `noindex` |
+| `CNAME` | Custom domain `mavericks-badminton.com` (keep!) |
+| `robots.txt`, `sitemap.xml` | Search engines |
 
 ## Preview locally
 ```bash
 python3 -m http.server 3010   # from the repo root
 ```
-Then open `/`, `/preview/`, `/v8/`. Do a hard refresh (Cmd+Shift+R) if a page looks old.
+Then open http://localhost:3010/. Hard refresh (Cmd+Shift+R) if a page looks old.
 
-## V8 notes (`v8/`)
-- Name: Mavericks Badminton Academy. Motto: Enjoy. Enable. Empower.
-- Contacts: all numbers/links come from the `CONTACT` object at the top of `v8/js/main.js`. Visible phone number is Priya's only (07404 671992), shown without a name. WhatsApp links use the club's existing number but never display it. No QR code.
-- Sunday Mens session is intentionally removed. Friday mixed session includes men.
-- Themes: five themes in `v8/css/style.css` driven by CSS variables. Default is `dark`
-  (`<html data-theme="dark">`). `THEME_PICKER` at the top of `v8/js/main.js` is `false`
-  (picker hidden); `?theme=name` in the URL still previews others.
-- Photos: none yet. Put images in `v8/images/photos/`, then edit `photos.json`
-  (named slots and a `gallery` array). Step-by-step guide: `v8/images/photos/README.txt`.
-- Lisa Curtin is described only as "Elite England National Player" leading special sessions. Do not add titles or achievements that are not on the site already.
-- Keep animation light: it pauses when the tab is hidden or offscreen and respects reduced-motion.
+## Making changes
+Edit, commit, push to `main`: GitHub Pages republishes in 1-2 minutes. Better: work on a branch, check it locally, then merge.
+
+## V8 notes
+- Name: Mavericks Badminton Academy (formerly Mavericks Badminton Club). Motto: Enjoy. Enable. Empower.
+- Contacts: all numbers/links come from the `CONTACT` object at the top of `js/main.js`. Public email is hello@mavericks-badminton.com (forwards to mavericks.clubs@gmail.com via Namecheap). Visible phone is Priya's only (07404 671992). WhatsApp links use the club number but never display it.
+- Sunday Mens session stopped (2026-11-18). Men play Friday 7-9pm; Mens membership £30/month, Fridays only.
+- Themes: five themes in `css/style.css`, default `dark`. `?theme=name` in the URL previews others.
+- Photos: put images in `images/photos/`, edit `photos.json`. Guide: `images/photos/README.txt`.
+- Lisa Curtin: only "Elite England National Player" leading special sessions. Do not add titles/achievements not already on the site.
+- Keep animation light; it respects reduced-motion.
+- Junior fees are "ask us" on purpose (not published).
 
 ## Publishing rules
-- Never push or merge to `main` without the owner's say-so; `main` is the live site.
+- `main` is the live site (mavericks-badminton.com).
 - Work on a branch, preview locally, then merge.
-- When V8 replaces the live site: remove the `noindex` meta in `v8/index.html`, and decide on the domain/CNAME (currently held until the domain switch).
