@@ -43,8 +43,8 @@
     if (level === "payg") {
       main = w.gender === "w"
         ? { name: "Pay as you go · £6/hour", when: "Fri 7–9pm (mixed) or Sun 9–11am (ladies & kids)", meta: "Drop in, no commitment" }
-        : { name: "Pay as you go · £6/hour", when: "Fri 7–9pm (mixed) or Sun 9–11am (mens)", meta: "Drop in, no commitment" };
-      msg = hi + "I'd like to come along to a pay-as-you-go session (£6/hour). Which is best to start with: Friday 7–9pm or Sunday 9–11am?";
+        : { name: "Pay as you go · £6/hour", when: "Fridays 7–9pm (mixed session)", meta: "Drop in, no commitment" };
+      msg = hi + (w.gender === "m" ? "I'd like to come along to the Friday 7–9pm session on pay as you go (£6/hour). Is there space this week?" : "I'd like to come along to a pay-as-you-go session (£6/hour). Which is best to start with: Friday 7–9pm or Sunday 9–11am?");
       return { lbl: "Start here", main: main, alt: null, msg: msg };
     }
     if (w.gender === "w") {
@@ -52,7 +52,7 @@
       alt = { name: "Ladies 1 hour · £18/month", when: "Sundays only", meta: "Ladies only" };
       msg = hi + "I'm interested in the Ladies & Kids monthly membership (£28/month). How do I join?";
     } else {
-      main = { name: "Mens membership · £30/month", when: "Fri 7–9pm & Sun 9–11am", meta: "Monthly rolling, by standing order" };
+      main = { name: "Mens membership · £30/month", when: "Fridays 7–9pm", meta: "Monthly rolling, by standing order" };
       msg = hi + "I'm interested in the Mens monthly membership (£30/month). How do I join?";
     }
     return { lbl: "Best for you", main: main, alt: alt, msg: msg };
