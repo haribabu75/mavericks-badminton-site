@@ -11,7 +11,7 @@
 var CONTACT = {
   phoneDisplay: "07404 671992",
   phoneTel: "+447404671992",
-  whatsapp: "447809350478",
+  whatsapp: "447404671992",
   email: "hello@mavericks-badminton.com",
   juniorEmail: "mavericks.juniorclub@gmail.com",
   // The message WhatsApp opens with when a button has no message of its own
@@ -460,8 +460,8 @@ var THEME_PICKER = false;
       return { lbl: lbl, title: s.title, cls: "jr" + (cls ? " " + cls : ""),
         chips: ["📅 " + s.day + " " + s.time, "📍 " + VENUE].concat(s.flag ? ["🎯 " + s.flag] : []), price: "💷 " + FEES_JR, note: s.note };
     }
-    var LISA = { lbl: "Train with an England player ⭐", cls: "jr alt", title: "Lisa Curtin sessions", chips: ["⭐ Elite England National Player"], price: "",
-      note: "Special junior sessions are led by Elite England National Player Lisa Curtin. Ask us about the next one.",
+    var LISA = { lbl: "Guest sessions with an England player ⭐", cls: "jr alt", title: "Lisa Curtin sessions", chips: ["⭐ Elite England National Player"], price: "",
+      note: "Lisa Curtin leads a few guest junior sessions each term. Ask us about the next one.",
       link: { text: "Ask about Lisa’s sessions", msg: "Hi Mavericks Badminton Academy, I'd like to know about the sessions with Lisa Curtin." } };
     var SOC_FRI = { title: "Friday Mixed Session", chips: ["📅 Fridays 7–9pm", "📍 " + VENUE], note: "Men, ladies, couples & kids 11+ all playing together." };
     var SOC_SUN = { title: "Ladies Club — Sunday Ladies & Kids", chips: ["📅 Sundays 9–11am", "📍 " + VENUE], note: "Mavericks Ladies Club: ladies & kids 11+ social play." };
