@@ -1,11 +1,21 @@
 {
   "_help": "Read README.txt in this folder. Named photo slots are below; the Academy Moments gallery is the list called gallery.",
 
-  "junior-coaching": "",
-  "junior-lisa": "",
-  "junior-squad": "",
-  "venue-hall": "",
-  "about-club": "",
+  "junior-coaching": "junior-coaching.jpg",
+  "junior-coaching_alt": "Juniors and coaches training in the St. Michael's sports hall",
+  "junior-lisa": "junior-lisa.jpg",
+  "junior-lisa_alt": "Lisa Curtin, England national player, in action",
+  "junior-squad": "junior-squad.jpg",
+  "junior-squad_alt": "Juniors rallying on court with a coach watching",
+  "venue-hall": "venue-hall.jpg",
+  "venue-hall_alt": "Ladies Club members in the sports hall after a session, holding trophies",
+  "about-club": "about-club.jpg",
+  "about-club_alt": "Members after a social session in the sports hall",
 
-  "gallery": []
+  "gallery": [
+    { "file": "gallery-smash.jpg",   "alt": "A coach leaps to smash during a junior session", "focus": "center" },
+    { "file": "gallery-stretch.jpg", "alt": "A junior stretches up for a high shot", "focus": "center" },
+    { "file": "gallery-shuttles.jpg","alt": "Shuttlecocks on the sports hall floor during training", "focus": "center" },
+    { "file": "gallery-coach.jpg",   "alt": "A Mavericks coach and a junior between rallies", "focus": "center" }
+  ]
 }
