@@ -332,7 +332,7 @@ html[data-aud="grownups"] .aud-pane[data-for="juniors"] { display: none; }
 .week-legend i.ad { background: var(--ad); box-shadow: 0 0 0 1px var(--ad-d); }
 .week-legend .you { font-weight: 700; color: var(--strong); }
 .week-detail { margin-top: 14px; display: grid; gap: 10px; }
-.sess { padding: 18px 20px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); border-left: 5px solid var(--ad); animation: rise 0.45s var(--ease) both; }
+.sess { padding: 18px 20px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); animation: rise 0.45s var(--ease) both; }
 .sess.jr { border-left-color: var(--jr); }
 .sess.other { opacity: 0.62; background: var(--bg-2); }
 .sess-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -635,7 +635,6 @@ html[data-aud="grownups"] #join #price-jr { order: 2; }
   padding: clamp(22px, 2.8vw, 38px); border: 2px solid var(--jr-d); background: linear-gradient(150deg, var(--jr-tint), var(--surface) 75%);
   scroll-margin-top: calc(var(--stage-h) + var(--header-h) + 8px);
 }
-.lisa::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; border-radius: var(--radius) var(--radius) 0 0; background: linear-gradient(90deg, var(--jr), var(--ad)); }
 .lisa-eyebrow { margin: 0 0 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--jr-ink); }
 .lisa-name { font-family: var(--display); font-size: clamp(54px, 6.4vw, 96px); line-height: 0.92; text-transform: uppercase; color: var(--strong); }
 .lisa-role { display: inline-block; margin: 12px 0 14px; padding: 6px 14px; border-radius: 999px; background: var(--jr); color: var(--on-jr); font: 700 13px/1.3 var(--body); letter-spacing: 0.08em; text-transform: uppercase; }

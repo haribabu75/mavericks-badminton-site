@@ -19,8 +19,9 @@
   <link rel="icon" href="images/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refine.css">
   <script>
     /* Runs before first paint: JS flag + pick the audience (Juniors by default; #grownups link or this tab's last choice). Nothing sensitive is stored. */
     (function () {
@@ -109,15 +110,17 @@
           <div class="chapter-inner">
 
             <div class="aud-pane" data-for="juniors">
-              <p class="hero-brand">Mavericks Badminton Academy</p>
-              <p class="eyebrow"><span class="pill-jr">Ages 6&ndash;18</span> Aylesbury &middot; Junior badminton coaching</p>
+              <figure class="photo-slot hero-photo" data-slot="junior-coaching" style="--ar:4/5"><figcaption>Photo slot · junior-coaching</figcaption></figure>
+                          <p class="hero-brand">Mavericks Badminton Academy</p>
+              
               <h1 class="display">
                 <span class="line">Junior</span>
                 <span class="line">Badminton</span>
                 <span class="line accent">Coaching.</span>
               </h1>
+              <p class="hero-facts"><span class="pill-jr">Ages 6&ndash;18</span> Aylesbury &middot; Junior badminton coaching</p>
               <p class="lead">Fun, friendly coaching for 6-18 year olds, led by a Level 2 Badminton England coach with 3 Level 1 assistants, plus a few guest sessions each term with Elite England National Player Lisa Curtin. <strong>Enjoy. Enable. Empower.</strong></p>
-              <a href="#lisa" class="chip-lisa"><span aria-hidden="true">&#9733;</span> Guest sessions with England player Lisa Curtin <span aria-hidden="true">&rarr;</span></a>
+              <a href="#lisa" class="chip-lisa"><svg class="ico-star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg> Guest sessions with England player Lisa Curtin <svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               <div class="cta-row">
                 <a href="#contact" class="btn btn-wa" data-wa="Hi Mavericks Badminton Academy, I'd like to ask about junior badminton coaching."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp us</span></a>
                 <a href="#contact" class="btn btn-call" data-call><svg class="ico" aria-hidden="true"><use href="#i-call"/></svg><span>Call <span data-text="phone"></span></span></a>
@@ -132,14 +135,16 @@
             </div>
 
             <div class="aud-pane" data-for="grownups">
-              <p class="hero-brand">Mavericks Badminton Academy</p>
-              <p class="eyebrow"><span class="pill-jr">Grown-ups</span> Aylesbury &middot; Friendly social badminton</p>
+              <figure class="photo-slot hero-photo" data-slot="venue-hall" style="--ar:4/5"><figcaption>Photo slot · venue-hall</figcaption></figure>
+                          <p class="hero-brand">Mavericks Badminton Academy</p>
+              
               <h1 class="display">
                 <span class="line">Grown-ups</span>
                 <span class="line">Play Too.</span>
                 <span class="line accent">Come Play.</span>
               </h1>
-              <p class="lead">Relaxed, welcoming social badminton at St. Michael&rsquo;s &mdash; the Mavericks Ladies Club on Sunday mornings and our friendly mixed session on Fridays. Pay as you go from &pound;6/hr, or join monthly. <strong>Enjoy. Enable. Empower.</strong></p>
+              <p class="hero-facts"><span class="pill-jr">Grown-ups</span> Aylesbury &middot; Friendly social badminton</p>
+              <p class="lead">Relaxed, welcoming social badminton at St. Michael&rsquo;s: the Mavericks Ladies Club on Sunday mornings and our friendly mixed session on Fridays. Pay as you go from &pound;6/hr, or join monthly. <strong>Enjoy. Enable. Empower.</strong></p>
               <div class="cta-row">
                 <a href="#contact" class="btn btn-wa" data-wa="Hi Mavericks Badminton Academy, I'd like to ask about the Ladies Club and Friday mixed badminton sessions."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp us</span></a>
                 <a href="#contact" class="btn btn-call" data-call><svg class="ico" aria-hidden="true"><use href="#i-call"/></svg><span>Call <span data-text="phone"></span></span></a>
@@ -160,9 +165,9 @@
         <!-- 01 FINDER -->
         <section class="chapter" id="finder" data-chapter="1" data-zone="Find">
           <div class="chapter-inner">
-            <p class="eyebrow"><span class="num">01</span> Find your session</p>
+            <p class="sr-only">Find your session</p>
             <h2 class="h2">Which session is <span class="accent">yours?</span></h2>
-            <p class="muted finder-intro">Three quick taps and we&rsquo;ll show you the right session, the time and the price &mdash; then message us on WhatsApp with your answers already written.</p>
+            <p class="muted finder-intro">Three quick taps and we&rsquo;ll show you the right session, the time and the price, then message us on WhatsApp with your answers already written.</p>
 
             <div class="finder glass" id="finder-app" aria-labelledby="finder-title">
               <h3 class="sr-only" id="finder-title">Session finder</h3>
@@ -172,7 +177,7 @@
               <div class="finder-static">
                 <h3 class="h3">Who&rsquo;s playing?</h3>
                 <ul class="ticks">
-                  <li><b>Child aged 6-18:</b> Fridays 5:30-7pm Beginners &middot; Saturdays 5-7pm Intermediate &middot; Saturdays 3:30-5pm Advanced (assessment &amp; invitation only). Fees per term &mdash; ask us.</li>
+                  <li><b>Child aged 6-18:</b> Fridays 5:30-7pm Beginners &middot; Saturdays 5-7pm Intermediate &middot; Saturdays 3:30-5pm Advanced (assessment &amp; invitation only). Fees per term: ask us.</li>
                   <li><b>Women:</b> Friday 7-9pm mixed &middot; Sunday 9-11am Ladies Club. From &pound;6/hr pay as you go.</li>
                   <li><b>Men:</b> Friday 7-9pm mixed. &pound;6/hr pay as you go, or &pound;30/month.</li>
                 </ul>
@@ -185,7 +190,7 @@
         <!-- 02 JUNIORS -->
         <section class="chapter" id="juniors" data-chapter="2" data-zone="Juniors">
           <div class="chapter-inner">
-            <p class="eyebrow"><span class="num">02</span> Junior coaching &middot; 6-18 yrs</p>
+            <p class="sr-only">Junior coaching &middot; 6-18 yrs</p>
             <h2 class="h2">Junior coaching at<br>Mavericks Badminton Academy</h2>
             <p class="lead">At Mavericks, we aim to encourage children to learn badminton in a sportive and fun environment, allowing them to develop skills that enable them to play competitively within various badminton leagues.</p>
 
@@ -197,17 +202,17 @@
             <h3 class="h3">Sessions at St. Michael&rsquo;s</h3>
             <div class="levels">
               <article class="card level lv-1 tilt-glow">
-                <span class="lv-tag">Beginners</span>
+                <i class="pips" data-n="1" role="img" aria-label="Level 1 of 3"><b></b><b></b><b></b></i><span class="lv-tag">Beginners</span>
                 <h4>Fridays <b>5:30-7pm</b></h4>
                 <p>New to badminton? Start here.</p>
               </article>
               <article class="card level lv-2 tilt-glow">
-                <span class="lv-tag">Intermediate</span>
+                <i class="pips" data-n="2" role="img" aria-label="Level 2 of 3"><b></b><b></b><b></b></i><span class="lv-tag">Intermediate</span>
                 <h4>Saturdays <b>5-7pm</b></h4>
                 <p>Two hours of coaching.</p>
               </article>
               <article class="card level lv-3 tilt-glow">
-                <span class="lv-tag">Advanced</span>
+                <i class="pips" data-n="3" role="img" aria-label="Level 3 of 3"><b></b><b></b><b></b></i><span class="lv-tag">Advanced</span>
                 <h4>Saturdays <b>3:30-5pm</b></h4>
                 <p>Strict assessment &amp; invitation only.</p>
               </article>
@@ -263,7 +268,7 @@
                 <li>Saturdays 12th Sep &ndash; 12th Dec 2026 (half term break 24th &amp; 31st Oct)</li>
               </ul>
               <h4>Fees</h4>
-              <p>Fees are billed per term, paid strictly in advance, plus a yearly registration fee, which is each junior&rsquo;s Badminton England membership and includes Badminton England&rsquo;s insurance cover (valid 1st Sep &ndash; 31st Aug). Fees on enquiry &mdash; message or call below.</p>
+              <p>Fees are billed per term, paid strictly in advance, plus a yearly registration fee, which is each junior&rsquo;s Badminton England membership and includes Badminton England&rsquo;s insurance cover (valid 1st Sep &ndash; 31st Aug). Fees on enquiry: message or call below.</p>
               <p class="junior-contact">
                 Call: <a href="#contact" data-call data-text="phone"></a><br>
                 Email: <a href="#contact" data-mailto="juniorEmail" data-text="juniorEmail"></a>
@@ -280,7 +285,7 @@
         <!-- 03 SCHEDULE -->
         <section class="chapter" id="schedule" data-chapter="3" data-zone="Schedule">
           <div class="chapter-inner">
-            <p class="eyebrow"><span class="num">03</span> Weekly schedule</p>
+            <p class="sr-only">Weekly schedule</p>
             <h2 class="h2">Your week on court.</h2>
             <p class="muted">St. Michael&#39;s School Sports Hall, Weedon Road, Aylesbury HP19 9PG &middot; <a href="https://maps.app.goo.gl/BkREnDt3v22gYq8x8" target="_blank" rel="noopener">Open in Maps</a></p>
 
@@ -304,22 +309,22 @@
         <!-- 04 GROWN-UPS (anchor: #grownups) -->
         <section class="chapter" id="grownups" data-chapter="4" data-zone="Grown-ups">
           <div class="chapter-inner">
-            <p class="eyebrow"><span class="num">04</span> Grown-ups</p>
+            <p class="sr-only">Grown-ups</p>
             <h2 class="h2">Grown-ups<br>play too.</h2>
-            <p class="lead">Friendly, no-pressure social badminton for ladies, men &amp; kids 11+ &mdash; pay as you go or monthly, at St. Michael&rsquo;s School sports hall.</p>
+            <p class="lead">Friendly, no-pressure social badminton for ladies, men &amp; kids 11+, pay as you go or monthly, at St. Michael&rsquo;s School sports hall.</p>
             <div class="stack">
               <article class="card tilt-glow prog">
                 <span class="prog-tag">Fri</span>
                 <div>
                   <h4>Friday Mixed Session</h4>
-                  <p>7-9pm &mdash; mens, ladies, couples &amp; kids 11+ all playing together.</p>
+                  <p>7-9pm: mens, ladies, couples &amp; kids 11+ all playing together.</p>
                 </div>
               </article>
               <article class="card tilt-glow prog">
                 <span class="prog-tag">Sun</span>
                 <div>
                   <h4>Mavericks Ladies Club &mdash; Sunday Ladies &amp; Kids</h4>
-                  <p>9-11am &mdash; ladies &amp; kids 11+ social play.</p>
+                  <p>9-11am: ladies &amp; kids 11+ social play.</p>
                 </div>
               </article>
             </div>
@@ -331,11 +336,11 @@
 
             <div class="panel glass">
               <h3 class="h3 h3-first">Built on a motto</h3>
-              <p>Mavericks Badminton Academy started with a motto: Enjoy, Enable, Empower. We aim to be a place where you can play, relax, socialise, enjoy and have fun hassle-free &mdash; expanding around the interests of the community, and supporting healthy minds and healthy bodies.</p>
+              <p>Mavericks Badminton Academy started with a motto: Enjoy, Enable, Empower. We aim to be a place where you can play, relax, socialise, enjoy and have fun hassle-free, expanding around the interests of the community and supporting healthy minds and healthy bodies.</p>
               <ul class="ticks">
-                <li>Junior coaching &mdash; for 6-18yr olds</li>
-                <li>Mavericks Ladies Club &mdash; social play group</li>
-                <li>Friday mixed social play &mdash; men, ladies, couples &amp; kids 11+</li>
+                <li>Junior coaching for 6-18yr olds</li>
+                <li>Mavericks Ladies Club, a social play group</li>
+                <li>Friday mixed social play for men, ladies, couples &amp; kids 11+</li>
               </ul>
             </div>
             <!-- PHOTO SLOT "about-club": team / evening group shot, landscape 16:9 -->
@@ -348,7 +353,7 @@
         <!-- 05 PRICING (the two groups swap order with the audience) -->
         <section class="chapter" id="join" data-chapter="5" data-zone="Pricing">
           <div class="chapter-inner">
-            <p class="eyebrow"><span class="num">05</span> Fees &amp; membership</p>
+            <p class="sr-only">Fees &amp; membership</p>
             <h2 class="h2">Simple pricing.</h2>
 
             <div class="price-group" id="price-jr">
@@ -366,7 +371,7 @@
 
             <div class="price-group" id="price-ad">
               <h3 class="h3">Adult &amp; Kids (11+) Social Play</h3>
-              <p class="muted">Monthly rolling contracts &mdash; pre-payment by BACS/standing order only.</p>
+              <p class="muted">Monthly rolling contracts, pre-payment by BACS/standing order only.</p>
               <div class="price-grid">
                 <article class="card price tilt-glow">
                   <h4>Pay As You Go</h4>
@@ -399,7 +404,7 @@
             <div class="terms glass">
               <h3 class="h3">Membership Terms</h3>
               <ul class="ticks">
-                <li>Monthly rolling contract — no discounts or refunds for absences, and fees are not carried forward for a 'no show'.</li>
+                <li>Monthly rolling contract: no discounts or refunds for absences, and fees are not carried forward for a 'no show'.</li>
                 <li>Pre-payment by monthly BACS only (standing orders accepted).</li>
                 <li>Membership fee must be paid, and any break notified, by the 25th of the previous month.</li>
                 <li>3, 4 or 5 sessions in a calendar month incur the same membership fee.</li>
@@ -413,9 +418,9 @@
         <!-- 06 CONTACT -->
         <section class="chapter" id="contact" data-chapter="6" data-zone="Contact">
           <div class="chapter-inner">
-            <p class="eyebrow"><span class="num">06</span> Get in touch</p>
+            <p class="sr-only">Get in touch</p>
             <h2 class="h2">Game on?</h2>
-            <p class="lead">The quickest way to reach us is a WhatsApp message &mdash; we usually reply within a day. Prefer a chat? Give us a call.</p>
+            <p class="lead">The quickest way to reach us is a WhatsApp message, and we usually reply within a day. Prefer a chat? Give us a call.</p>
             <div class="cta-row">
               <a href="#contact" class="btn btn-wa" data-wa><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Message us on WhatsApp</span></a>
               <a href="#contact" class="btn btn-call" data-call><svg class="ico" aria-hidden="true"><use href="#i-call"/></svg><span>Call <span data-text="phone"></span></span></a>
@@ -439,7 +444,7 @@
     <!-- GALLERY (outside the sticky cinema). Built by js/main.js from the "gallery" list in images/photos/photos.json -->
     <section class="gallery" id="gallery">
       <div class="gallery-head">
-        <p class="eyebrow">Gallery</p>
+        <p class="sr-only">Gallery</p>
         <h2 class="h2">Academy moments.</h2>
         <p class="muted">Snapshots from our junior sessions, socials and tournaments.</p>
       </div>

@@ -448,7 +448,7 @@ var THEME_PICKER = false;
       { id: "short", em: "⏱️", t: "Just one hour", h: "Sundays, ladies only", only: "w" }
     ];
 
-    var FEES_JR = "Fees per term — ask us";
+    var FEES_JR = "Fees per term: ask us";
     var JR = {
       beginner: { title: "Junior Beginners", day: "Fridays", time: "5:30–7pm", ask: "try the Friday beginners session", note: "Our friendly starting point for 6–18 year olds. Level 2 coach plus Level 1 assistants. 11–12 weeks per term, term time only." },
       inter: { title: "Junior Intermediate", day: "Saturdays", time: "5–7pm", ask: "try the Saturday intermediate session", note: "Two hours of coaching for players who can already rally. 11–12 weeks per term, term time only." },
@@ -507,6 +507,30 @@ var THEME_PICKER = false;
       }
       return { cards: cards, wa: wa, askAge: who.junior, mail: Contact.mail(mailKey, subj, body) };
     }
+
+
+    /* preview-v1: the finder's emoji become one set of drawn line icons (same wording, no emoji) */
+    var IC = function (d) { return '<svg class="fi" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + d + "</svg>"; };
+    var ICONS = {
+      "🧒": IC('<circle cx="12" cy="8" r="3.2"/><path d="M6 20c0-3.5 2.7-5.6 6-5.6s6 2.1 6 5.6"/>'),
+      "🧑‍🎓": IC('<circle cx="12" cy="9" r="3.2"/><path d="M5.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6M8 5.2L12 3l4 2.2"/>'),
+      "🙋‍♀️": IC('<circle cx="10" cy="9" r="3.2"/><path d="M4.5 20c0-3.6 2.6-6 5.5-6s5.5 2.4 5.5 6M17 4v5M19.5 6.5h-5"/>'),
+      "🙋‍♂️": IC('<circle cx="10" cy="9" r="3.2"/><path d="M4.5 20c0-3.6 2.6-6 5.5-6s5.5 2.4 5.5 6M17.5 4.5v4.5M15.2 6.8h4.6"/>'),
+      "🌱": IC('<path d="M12 21v-9M12 12c0-4 2.6-6.4 7-6.4 0 4-2.7 6.4-7 6.4zM12 15c0-3-2-4.8-5.4-4.8 0 3 2 4.8 5.4 4.8z"/>'),
+      "⚡": IC('<path d="M13 3L5.5 13.2H11L10 21l7.5-10.2H12z"/>'),
+      "🏆": IC('<path d="M8 4h8v5a4 4 0 01-8 0zM8 6H5a3 3 0 003 4M16 6h3a3 3 0 01-3 4M12 13v4M8.5 20h7M10 17h4"/>'),
+      "🎟️": IC('<path d="M4 8.5A1.5 1.5 0 015.5 7h13A1.5 1.5 0 0120 8.5V10a2 2 0 000 4v1.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 15.5V14a2 2 0 000-4zM14 7v10"/>'),
+      "📅": IC('<rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/>'),
+      "⏱️": IC('<circle cx="12" cy="13.5" r="7"/><path d="M12 9.5v4l2.6 1.6M9.5 3h5"/>'),
+      "📍": IC('<path d="M12 21s6.5-5.7 6.5-11A6.5 6.5 0 005.5 10C5.5 15.3 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/>'),
+      "💷": IC('<circle cx="12" cy="12" r="8.5"/><path d="M14.8 8.6c-.6-.7-1.5-1.1-2.6-1.1-1.6 0-2.7 1-2.7 2.5 0 2.7 0 3.4-1.3 4.8h7.3M8.2 12.3h5.6"/>'),
+      "🎯": IC('<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/>'),
+      "⭐": IC('<path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6-4.5-4.2 6.1-.8z"/>'),
+      "🏸": IC('<path d="M10.5 13.5L5 19M8 20l-4-4M13.5 10.5l1.2-1.2a4.2 4.2 0 10-5.9-5.9L7.6 4.6M13.5 10.5l6 6a1.6 1.6 0 01-2.3 2.3l-6-6"/>')
+    };
+    var DROP = /(?:🎉|🌟|💥)/g; // pure cheer emoji (party, glow, boom) are dropped
+    var ICON_RE = new RegExp(Object.keys(ICONS).map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|"), "g");
+    function iconify(h) { return h.replace(DROP, "").replace(/ +(<\/)/g, "$1").replace(ICON_RE, function (m) { return ICONS[m]; }); }
 
     var state = { step: "who", who: null, level: null, res: null };
     var STEPS = { who: 1, level: 2, result: 3 };
@@ -567,7 +591,7 @@ var THEME_PICKER = false;
           '<p class="ffine">Your answers are already written in the message &mdash; just press send. We usually reply within a day. Sessions are at St. Michael&rsquo;s School, Weedon Road, Aylesbury HP19 9PG.</p>' +
           '<button type="button" class="fback" data-back="who">↺ Start again</button></div>';
       }
-      ui.innerHTML = html;
+      ui.innerHTML = iconify(html);
       if (focus) {
         var h = $(".fq", ui); if (h) h.focus({ preventScroll: true });
         if (state.step === "result") rootEl.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });

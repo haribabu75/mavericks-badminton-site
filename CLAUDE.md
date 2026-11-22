@@ -10,7 +10,7 @@ they remain in git history (commit `b5e37d9` original, `c3db6ba` preview).
 
 | File | Purpose |
 |---|---|
-| `index.html`, `css/`, `js/`, `images/` | The site (self-contained, relative paths only) |
+| `index.html`, `css/`, `js/`, `images/` | The site (self-contained, relative paths only). `css/style.css` is the base; `css/refine.css` loads after it and holds the redesign (amber = junior, aqua = grown-up; Anton headlines, Figtree body) |
 | `tools/session-manager.html` | Members' session tool, linked from the footer only, `noindex` |
 | `CNAME` | Custom domain `mavericks-badminton.com` (keep!) |
 | `robots.txt`, `sitemap.xml` | Search engines |
